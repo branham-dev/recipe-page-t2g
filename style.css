@@ -11,6 +11,8 @@
 	--space-blocks: 2rem;
 	--space-content: 1.5rem;
 	--width-edge: 85%;
+
+	--maximum-width: 768px;
 }
 
 @font-face {
@@ -45,9 +47,11 @@ img {
 	display: block;
 }
 
-/* BLOCK HEADER */
+/*| HEADER BLOCK  STYLES */
 .header {
 	width: 100%;
+	max-width: var(--maximum-width);
+	margin: 0 auto;
 }
 
 .header__figure {
@@ -64,19 +68,31 @@ img {
 
 .header__section {
 	width: var(--width-edge);
+	max-width: var(--maximum-width);
 	margin: 0 auto;
 }
 
 .header__title {
 	font-size: 2.18rem;
 	letter-spacing: 0.05rem;
-    color: var(--color-stone-900);
-    font-family: "young-serif";
-    margin-bottom: var(--space-content);
+	color: var(--color-stone-900);
+	font-family: "young-serif";
+	margin-bottom: var(--space-content);
 }
 
 .header__description {
-    color: var(--color-stone-600);
-    font-size: 1.25rem;
-    line-height: 1.45;
+	color: var(--color-stone-600);
+	font-size: 1.25rem;
+	line-height: 1.45;
 }
+
+/* | HEADER RESPONSIVE BREAKPOINTS */
+@media (min-width: 768px) {
+	.header__image {
+		border-radius: 0.5rem;
+	}
+	.header__section {
+		width: unset;
+	}
+}
+
