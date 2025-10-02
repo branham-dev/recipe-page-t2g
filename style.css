@@ -1,9 +1,43 @@
+:root {
+	--color-white: hsl(0, 0%, 100%);
+	--color-stone-100: hsl(30, 54%, 90%);
+	--color-stone-150: hsl(30, 18%, 87%);
+	--color-stone-600: hsl(30, 10%, 34%);
+	--color-stone-900: hsl(24, 5%, 18%);
+	--color-brown-800: hsl(14, 45%, 36%);
+	--color-rose-800: hsl(332, 51%, 32%);
+	--color-rose-50: hsl(330, 100%, 98%);
+
+	--space-blocks: 2.57rem;
+	--width-edge: 85%;
+}
+
+@font-face {
+	font-family: "young-serif";
+	src: url("./assets/fonts/young-serif/YoungSerif-Regular.ttf");
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "outfit";
+	src: url("./assets/fonts/outfit/Outfit-VariableFont_wght.ttf");
+	font-weight: inherit;
+	font-style: normal;
+	font-display: swap;
+}
+
 *,
 *::before,
 *::after {
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
+}
+
+body {
+    font-family: "young-serif"
 }
 
 img {
@@ -18,10 +52,21 @@ img {
 .header__figure {
 	width: 100%;
 	height: 300px;
+    margin-bottom: var(--space-blocks);
 }
 
 .header__image {
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
+}
+
+.header__section {
+    width: var(--width-edge);
+    margin: 0 auto;
+}
+
+.header__tittle {
+    font-size: 3rem;
+    letter-spacing: 0.05rem;
 }
